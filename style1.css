@@ -1,0 +1,290 @@
+body {
+    cursor: url('neon-cursor.png'), auto;
+}
+@media (max-width: 768px) {
+    .loader::after {
+        width: 40px;
+        height: 40px;
+        border-width: 4px;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .service-card {
+        padding: 1rem;
+    }
+}
+.hero-section h1 {
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+.service-card::before {
+    transition: left 0.5s ease 0.1s;
+}
+.glow-button {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section::before {
+    animation: moveLines 10s linear infinite;
+}
+
+@keyframes moveLines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+.loader.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+body {
+    cursor: url('neon-cursor.png'), auto;
+}
+
+@media (max-width: 768px) {
+    .loader::after {
+        width: 40px;
+        height: 40px;
+        border-width: 4px;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .service-card {
+        padding: 1rem;
+    }
+}
+
+.hero-section h1 {
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.service-card::before {
+    transition: left 0.5s ease 0.1s;
+}
+
+.glow-button {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section {
+    background: linear-gradient(-45deg, #000, #111, #000, #111);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">'
+    + '<path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.2" d="M0,160 C240,140 480,80 720,120 S1440,180 1440,180" />'
+    + '<path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.3" d="M0,180 C240,160 480,100 720,140 S1440,200 1440,200" />'
+    + '<path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.4" d="M0,200 C240,180 480,120 720,160 S1440,220 1440,220" />'
+    + '<path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.5" d="M0,220 C240,200 480,140 720,180 S1440,240 1440,240" />'
+    + '<path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.6" d="M0,240 C240,220 480,160 720,200 S1440,260 1440,260" />'
+    + '<path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.7" d="M0,260 C240,240 480,180 720,220 S1440,280 1440,280" />'
+    + '<path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.8" d="M0,280 C240,260 480,200 720,240 S1440,300 1440,300" />'
+    + '</svg>');
+    background-size: cover;
+    background-position: bottom;
+    will-change: transform;
+    transition: transform 0.5s ease-out;
+}
+
+window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY;
+    document.querySelector('.hero-section').style.backgroundPositionY = `${scrollPos * -0.3}px`;
+    document.querySelector('.hero-section::before').style.transform = `translateY(${scrollPos * -0.2}px)`;
+});
+
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border: 6px solid #00ffcc; /* Dark neon green */
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Dark Neon Colors */
+:root {
+    --dark-neon-blue: #00a8ff;
+    --dark-neon-green: #00ffcc;
+    --dark-neon-pink: #ff00ff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(-45deg, #000, #111, #000, #111); /* Dark gradient */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-section h1 {
+    background: linear-gradient(45deg, #00FF00, #00FFFF); /* Neon green to neon blue */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.glow-button {
+    animation: glow 2s infinite;
+    background-color: #00FFFF; /* Neon blue */
+    color: #000; /* Black text */
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.glow-button:hover {
+    background-color: #FFFF00; /* Neon yellow on hover */
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); } /* Neon blue glow */
+    50% { box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); } /* Neon yellow glow */
+    100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); }
+}
+
+/* Background Parallel Curved Lines */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.2" d="M0,160L48,140C96,120,192,80,288,100C384,120,480,180,576,190C672,200,768,140,864,130C960,120,1056,140,1152,150C1248,160,1344,160,1392,160L1440,160"></path><path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.3" d="M0,180L48,160C96,140,192,100,288,110C384,120,480,190,576,200C672,210,768,150,864,140C960,130,1056,150,1152,160C1248,170,1344,170,1392,170L1440,170"></path><path fill="none" stroke="%2300ffff" stroke-width="2" stroke-opacity="0.4" d="M0,200L48,180C96,160,192,120,288,130C384,140,480,200,576,210C672,220,768,160,864,150C960,140,1056,160,1152,170C1248,180,1344,180,1392,180L1440,180"></path></svg>');
+    background-size: cover;
+    background-position: bottom;
+    will-change: transform;
+}
+
+/* Service Cards */
+.service-card {
+    background: #111;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark-neon-blue);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(50px);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 168, 255, 0.3);
+}
+
+.service-card .icon {
+    color: var(--dark-neon-blue);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--dark-neon-green);
+}
+
+.service-card p {
+    color: var(--dark-neon-blue);
+}
+#why-us .icon {
+    transition: transform 0.3s ease;
+  }
+  
+  #why-us .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  #why-us h3 {
+    transition: color 0.3s ease;
+  }
+  
+  #why-us h3:hover {
+    color: var(--dark-neon-blue);
+  }
+
+  #why-us .icon {
+    transition: transform 0.3s ease;
+}
+
+#why-us .icon:hover {
+    transform: scale(1.1); /* Enlarges the icon */
+}
+
+#why-us h3 {
+    transition: color 0.3s ease;
+}
+
+#why-us h3:hover {
+    color: var(--dark-neon-blue); /* Neon blue color on hover */
+}

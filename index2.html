@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechSolutions offers innovative tech services including web development, digital marketing, UI/UX design, and hosting solutions.">
+  <meta name="keywords" content="tech solutions, web development, digital marketing, UI/UX design, hosting">
+  <meta name="author" content="TechSolutions">
+  <title>TechSolutions - Innovate with Us</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body class="bg-black text-white">
+  <!-- Loader -->
+  <div class="loader"></div>
+
+  <!-- Navbar -->
+  <nav class="bg-black text-white fixed w-full z-50 border-b border-dark-neon-blue">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-dark-neon-green">TechSolutions</a>
+      <ul id="nav-menu" class="hidden md:flex space-x-8">
+        <li><a href="#home" class="hover:text-dark-neon-blue">Home</a></li>
+        <li><a href="#services" class="hover:text-dark-neon-green">Services</a></li>
+        <li><a href="#about" class="hover:text-dark-neon-blue">About</a></li>
+        <li><a href="#why-us" class="hover:text-dark-neon-green">Why Us</a></li>
+        <li><a href="#contact" class="hover:text-dark-neon-blue">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-dark-neon-blue" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section flex items-center justify-center h-screen text-white relative overflow-hidden">
+    <!-- Background Curved Lines -->
+    <div class="absolute inset-0 z-0">
+      <div class="white-lines"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="text-center z-10">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Innovative Tech Solutions</h1>
+      <p class="text-xl mb-8">Empowering businesses with cutting-edge technology.</p>
+      <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg glow-button">Explore Services</a>
+    </div>
+
+    <!-- AI-Generated Human Image -->
+    <div class="absolute bottom-0 right-0 z-10">
+      <img src="https://via.placeholder.com/400x600" alt="AI-Generated Human Image" class="w-64 md:w-96" aria-label="AI-Generated Human Image">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-black">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6 text-dark-neon-green">About Us</h2>
+      <p class="text-xl mb-8 text-dark-neon-blue">We are a team of passionate developers and designers dedicated to delivering innovative tech solutions tailored to your business needs. With years of experience, we help businesses grow and thrive in the digital world.</p>
+      <a href="#contact" class="bg-dark-neon-blue hover:bg-dark-neon-green text-black px-8 py-3 rounded-lg">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Why We Are Best From Others Section -->
+  <section id="why-us" class="py-20 bg-black">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-dark-neon-green">Why We Are Best From Others</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-trophy fa-3x text-dark-neon-blue"></i></div>
+          <h3 class="text-dark-neon-green">Expertise in IT Careers</h3>
+          <p class="text-dark-neon-blue">Having completed successful projects, our expertise lies in guiding youth towards the best IT career choices.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-tools fa-3x text-dark-neon-green"></i></div>
+          <h3 class="text-dark-neon-green">Quick Repair Process</h3>
+          <p class="text-dark-neon-blue">Discover our web-based work order system, streamlining repair services, maximizing efficiency, and meeting customer demands.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-clock fa-3x text-dark-neon-blue"></i></div>
+          <h3 class="text-dark-neon-green">Always Available</h3>
+          <p class="text-dark-neon-blue">By fostering enduring partnerships with clients, we consistently meet deadlines and achieve shared goals.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-rocket fa-3x text-dark-neon-green"></i></div>
+          <h3 class="text-dark-neon-green">Fast Services</h3>
+          <p class="text-dark-neon-blue">Valuing your time and promising timely project completion, we ensure professionalism, trust, and unwavering dedication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IT Services Section -->
+  <section id="services" class="py-20 bg-black">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-dark-neon-green">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="service-card" onclick="fillServiceRequest('Web Design & Development')">
+          <div class="icon"><i class="fas fa-laptop-code fa-3x text-dark-neon-blue"></i></div>
+          <h3 class="text-dark-neon-green">Web Design & Development</h3>
+          <p class="text-dark-neon-blue">Craft captivating websites and apps with full-stack solutions, responsive design, CMS, e-commerce, and mobile integration.</p>
+        </div>
+        <div class="service-card" onclick="fillServiceRequest('Digital Marketing')">
+          <div class="icon"><i class="fas fa-chart-line fa-3x text-dark-neon-green"></i></div>
+          <h3 class="text-dark-neon-green">Digital Marketing</h3>
+          <p class="text-dark-neon-blue">Boost online visibility with SEO, social media, content marketing, email marketing, and PPC advertising.</p>
+        </div>
+        <div class="service-card" onclick="fillServiceRequest('UI/UX Design')">
+          <div class="icon"><i class="fas fa-palette fa-3x text-dark-neon-blue"></i></div>
+          <h3 class="text-dark-neon-green">UI/UX Design</h3>
+          <p class="text-dark-neon-blue">Create stunning, user-centric designs, including AR/VR experiences, using Figma and Canva.</p>
+        </div>
+        <div class="service-card" onclick="fillServiceRequest('Hosting & Deployments')">
+          <div class="icon"><i class="fas fa-cloud-upload-alt fa-3x text-dark-neon-green"></i></div>
+          <h3 class="text-dark-neon-green">Hosting & Deployments</h3>
+          <p class="text-dark-neon-blue">Ensure secure online presence with cloud solutions, custom hosting, data backup, and domain management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-black">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6 text-dark-neon-green">REACH OUT TO US NOW!</h2>
+      <form id="contact-form" class="max-w-lg mx-auto bg-black p-6 shadow-md rounded-lg border border-dark-neon-blue">
+        <div class="mb-4">
+          <label for="name" class="block font-semibold mb-2 text-dark-neon-green">Your Name</label>
+          <input type="text" id="name" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block font-semibold mb-2 text-dark-neon-green">Your Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block font-semibold mb-2 text-dark-neon-green">Your Phone Number</label>
+          <input type="tel" id="phone" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" placeholder="Enter your phone number">
+        </div>
+        <div class="mb-4">
+          <label for="service-request" class="block font-semibold mb-2 text-dark-neon-green">Service Request</label>
+          <input type="text" id="service-request" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" readonly>
+        </div>
+        <div class="mb-4">
+          <label for="file-upload" class="block font-semibold mb-2 text-dark-neon-green">Upload Document (optional)</label>
+          <input type="file" id="file-upload" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue">
+        </div>
+        <button type="submit" class="bg-dark-neon-blue hover:bg-dark-neon-green text-black px-6 py-2 rounded-lg">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 border-t border-dark-neon-blue">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-dark-neon-green">&copy; 2023 TechSolutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="javascript1.js"></script>
+</body>
+</html>
