@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechSolutions - Innovate with Us</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Styles -->
+  <style>
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-hover:hover {
+      transform: translateY(-10px);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-gray-900 text-white fixed w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">TechSolutions</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#services" class="hover:text-blue-500">Services</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+      <button class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section flex items-center justify-center h-screen text-white">
+    <div class="text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Innovative Tech Solutions</h1>
+      <p class="text-xl mb-8">Empowering businesses with cutting-edge technology.</p>
+      <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- IT Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">OUR IT SERVICES</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-lg card-hover">
+          <div class="text-blue-600 text-4xl mb-4">🖥️</div>
+          <h3 class="text-2xl font-bold mb-4">Web Design & Development</h3>
+          <p class="text-gray-600">Craft captivating websites and apps with full-stack solutions, responsive design, CMS, e-commerce, and mobile integration.</p>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-lg card-hover">
+          <div class="text-blue-600 text-4xl mb-4">📈</div>
+          <h3 class="text-2xl font-bold mb-4">Digital Marketing</h3>
+          <p class="text-gray-600">Boost online visibility with SEO, social media, content marketing, email marketing, and PPC advertising.</p>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-lg card-hover">
+          <div class="text-blue-600 text-4xl mb-4">🎨</div>
+          <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+          <p class="text-gray-600">Create stunning, user-centric designs, including AR/VR experiences, using Figma and Canva.</p>
+        </div>
+        <!-- Service Card 4 -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-lg card-hover">
+          <div class="text-blue-600 text-4xl mb-4">☁️</div>
+          <h3 class="text-2xl font-bold mb-4">Hosting & Deployments</h3>
+          <p class="text-gray-600">Ensure secure online presence with cloud solutions, custom hosting, data backup, and domain management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reach Out Section -->
+  <section id="reach-out" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">REACH OUT TO US NOW!</h2>
+      <div class="max-w-2xl mx-auto">
+        <form class="bg-gray-50 p-8 rounded-lg shadow-lg">
+          <div class="mb-6">
+            <input type="text" placeholder="Full Name*" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+          </div>
+          <div class="mb-6">
+            <input type="email" placeholder="Email Address*" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+          </div>
+          <div class="mb-6">
+            <input type="tel" placeholder="Mobile Number*" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+          </div>
+          <div class="mb-6">
+            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+              <option>Have you been here before?</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg">GET FREE CONSULTATION</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Courses Section -->
+  <section id="courses" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Expertise Courses</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          <div class="text-blue-600 text-4xl mb-4">🐍</div>
+          <h3 class="text-xl font-bold mb-2">Python</h3>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          <div class="text-blue-600 text-4xl mb-4">⚛️</div>
+          <h3 class="text-xl font-bold mb-2">React JS</h3>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          <div class="text-blue-600 text-4xl mb-4">☁️</div>
+          <h3 class="text-xl font-bold mb-2">AWS</h3>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          <div class="text-blue-600 text-4xl mb-4">🤖</div>
+          <h3 class="text-xl font-bold mb-2">Machine Learning</h3>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          <div class="text-blue-600 text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          <div class="text-blue-600 text-4xl mb-4">📚</div>
+          <h3 class="text-xl font-bold mb-2">View More</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2023 TechSolutions. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
