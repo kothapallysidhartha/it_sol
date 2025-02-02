@@ -99,7 +99,7 @@ body {
     + '</svg>');
     background-size: cover;
     background-position: bottom;
-    will-change: :no-button;
+    will-change: transform;
     transition: transform 0.5s ease-out;
 }
 
