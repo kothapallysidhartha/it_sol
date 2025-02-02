@@ -189,3 +189,72 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial update to show the first card
     updateVisibleCard();
   });
+
+  function fillServiceRequest(serviceName) {
+    document.getElementById("service-request").value = serviceName;
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }
+
+
+
+  const express = require('express');
+  const nodemailer = require('nodemailer');
+  const bodyParser = require('body-parser');
+  
+  const app = express();
+  const port = 3000;
+  
+  // Middleware to parse form data
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
+  
+  // Set up Nodemailer transport
+  const transporter = nodemailer.createTransport({
+    service: 'gmail', // You can use other services like SendGrid or Mailgun
+    auth: {
+      user: 'crazycodersdev@gmail.com', // Replace with your email
+      pass: 'developers@2023',  // Replace with your email password or app password
+    },
+  });
+  
+  // Form submission route
+  app.post('/submit-form', (req, res) => {
+    const { name, email, phone, serviceRequest, fileUpload } = req.body;
+  
+    // Email to admin
+    const adminMailOptions = {
+      from: 'crazycodersdev@gmail.com',  // Admin email
+      to: 'crazycodersdev@example.com', // Replace with admin email
+      subject: 'New Contact Form Submission',
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService Request: ${serviceRequest}`,
+    };
+  
+    // Send email to admin
+    transporter.sendMail(adminMailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        return res.status(500).send('Error sending email to admin');
+      }
+  
+      // Send email to customer
+      const customerMailOptions = {
+        from: 'crazycodersdev@gmail.com',
+        to: email,
+        subject: 'Thank you for reaching out!',
+        text: `Hello ${name},\n\nThank you for contacting us. We have received your message and will get back to you soon.\n\nRegards,\nctrl+shift.solutions`,
+      };
+  
+      transporter.sendMail(customerMailOptions, (error, info) => {
+        if (error) {
+          console.log(error);
+          return res.status(500).send('Error sending email to customer');
+        }
+        res.status(200).send('Form submitted successfully!');
+      });
+    });
+  });
+  
+  app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+  });
+  

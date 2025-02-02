@@ -6,7 +6,7 @@
   <meta name="description" content="TechSolutions offers innovative tech services including web development, digital marketing, UI/UX design, and hosting solutions.">
   <meta name="keywords" content="tech solutions, web development, digital marketing, UI/UX design, hosting">
   <meta name="author" content="TechSolutions">
-  <title>TechSolutions - Innovate with Us</title>
+  <title>ctrl+shift - Innovate with Us</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
@@ -21,7 +21,7 @@
   <!-- Navbar -->
   <nav class="bg-black text-white fixed w-full z-50 border-b border-dark-neon-blue">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold text-dark-neon-green">TechSolutions</a>
+        <a href="#" class="text-2xl font-bold text-dark-neon-green">ctrl+shift</a>
       <ul id="nav-menu" class="hidden md:flex space-x-8">
         <li><a href="#home" class="hover:text-dark-neon-blue">Home</a></li>
         <li><a href="#services" class="hover:text-dark-neon-green">Services</a></li>
@@ -52,9 +52,7 @@
     </div>
 
     <!-- AI-Generated Human Image -->
-    <div class="absolute bottom-0 right-0 z-10">
-      <img src="https://via.placeholder.com/400x600" alt="AI-Generated Human Image" class="w-64 md:w-96" aria-label="AI-Generated Human Image">
-    </div>
+   
   </section>
 
   <!-- About Section -->
@@ -95,16 +93,21 @@
     </div>
   </section>
 
-  <!-- IT Services Section -->
+  <!-- IT Services   Section   <div class="service-card" onclick="window.open('contact.html', '_blank'); fillServiceRequest('Machine Learning')"> -->
   <section id="services" class="py-20 bg-black">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12 text-dark-neon-green">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="service-card" onclick="fillServiceRequest('Web Design & Development')">
-          <div class="icon"><i class="fas fa-laptop-code fa-3x text-dark-neon-blue"></i></div>
-          <h3 class="text-dark-neon-green">Web Design & Development</h3>
-          <p class="text-dark-neon-blue">Craft captivating websites and apps with full-stack solutions, responsive design, CMS, e-commerce, and mobile integration.</p>
-        </div>
+            <div class="icon"><i class="fas fa-laptop-code fa-3x text-dark-neon-blue"></i></div>
+            <h3 class="text-dark-neon-green">Web Design & Development</h3>
+            <p class="text-dark-neon-blue">Craft captivating websites and apps with full-stack solutions, responsive design, CMS, e-commerce, and mobile integration.</p>
+          </div>
+          <div class="service-card" onclick="fillServiceRequest('Machine Learning')">
+            <div class="icon"><i class="fas fa-brain fa-3x text-dark-neon-blue"></i></div>
+            <h3 class="text-dark-neon-green">Machine Learning</h3>
+            <p class="text-dark-neon-blue">Leverage advanced machine learning algorithms to build predictive models, automate processes, and gain insights from data.</p>
+          </div>
         <div class="service-card" onclick="fillServiceRequest('Digital Marketing')">
           <div class="icon"><i class="fas fa-chart-line fa-3x text-dark-neon-green"></i></div>
           <h3 class="text-dark-neon-green">Digital Marketing</h3>
@@ -149,12 +152,87 @@
           <label for="file-upload" class="block font-semibold mb-2 text-dark-neon-green">Upload Document (optional)</label>
           <input type="file" id="file-upload" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue">
         </div>
-        <button type="submit" class="bg-dark-neon-blue hover:bg-dark-neon-green text-black px-6 py-2 rounded-lg">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg glow-button">
           Send Message
         </button>
       </form>
     </div>
   </section>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevents the default form submission
+  
+      const formData = new FormData(this);
+  
+      fetch('/submit-form', {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Message sent successfully!');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending the message.');
+      });
+    });
+  </script>
+  
+
+ 
+
+
+<!-- Industries We Serve Section -->
+<section id="industries" class="py-20 bg-black">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 text-dark-neon-green">Industries We Serve</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Real Estate</h3>
+        <p class="text-dark-neon-blue">Transforming real estate with innovative tech solutions.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Logistic</h3>
+        <p class="text-dark-neon-blue">Streamlining logistics with cutting-edge technology.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Insurance</h3>
+        <p class="text-dark-neon-blue">Revolutionizing insurance with digital solutions.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Capital Market</h3>
+        <p class="text-dark-neon-blue">Empowering capital markets with advanced tech.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Manufacturing</h3>
+        <p class="text-dark-neon-blue">Enhancing manufacturing with smart technology.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Healthcare</h3>
+        <p class="text-dark-neon-blue">Innovating healthcare with digital transformation.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Fintech</h3>
+        <p class="text-dark-neon-blue">Driving fintech innovation with secure solutions.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Banking</h3>
+        <p class="text-dark-neon-blue">Modernizing banking with digital platforms.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Education Sector</h3>
+        <p class="text-dark-neon-blue">Transforming education with e-learning solutions.</p>
+      </div>
+      <div class="industry-item text-center p-6 border border-dark-neon-blue rounded-lg">
+        <h3 class="text-2xl font-bold text-dark-neon-green mb-4">Food and Beverage Industry</h3>
+        <p class="text-dark-neon-blue">Optimizing operations in the food and beverage sector.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Footer -->
   <footer class="bg-black text-white py-8 border-t border-dark-neon-blue">
@@ -167,3 +245,5 @@
   <script src="javascript1.js"></script>
 </body>
 </html>
+
+

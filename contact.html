@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - ctrl+shift</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body class="bg-black text-white">
+
+    <div class="loader"></div>
+
+  <!-- Navbar -->
+  <nav class="bg-black text-white fixed w-full z-50 border-b border-dark-neon-blue">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-dark-neon-green">ctrl+shift</a>
+      <ul id="nav-menu" class="hidden md:flex space-x-8">
+        <li><a href="index2.html" class="hover:text-dark-neon-blue">Home</a></li>
+        <li><a href="#services" class="hover:text-dark-neon-green">Services</a></li>
+        <li><a href="#about" class="hover:text-dark-neon-blue">About</a></li>
+        <li><a href="#why-us" class="hover:text-dark-neon-green">Why Us</a></li>
+        <li><a href="#contact" class="hover:text-dark-neon-blue">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-dark-neon-blue" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-black">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6 text-dark-neon-green">REACH OUT TO US NOW!</h2>
+      <form id="contact-form" class="max-w-lg mx-auto bg-black p-6 shadow-md rounded-lg border border-dark-neon-blue">
+        <div class="mb-4">
+          <label for="name" class="block font-semibold mb-2 text-dark-neon-green">Your Name</label>
+          <input type="text" id="name" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block font-semibold mb-2 text-dark-neon-green">Your Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block font-semibold mb-2 text-dark-neon-green">Your Phone Number</label>
+          <input type="tel" id="phone" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" placeholder="Enter your phone number">
+        </div>
+        <div class="mb-4">
+          <label for="service-request" class="block font-semibold mb-2 text-dark-neon-green">Service Request</label>
+          <input type="text" id="service-request" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue" readonly>
+        </div>
+        <div class="mb-4">
+          <label for="file-upload" class="block font-semibold mb-2 text-dark-neon-green">Upload Document (optional)</label>
+          <input type="file" id="file-upload" class="w-full p-2 border border-dark-neon-blue rounded bg-black text-dark-neon-blue">
+        </div>
+        <button type="submit" class="bg-dark-neon-blue hover:bg-dark-neon-green text-black px-6 py-2 rounded-lg">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+  <script src="javascript1.js"></script>
+</body>
+</html>
