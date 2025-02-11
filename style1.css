@@ -343,3 +343,28 @@ window.addEventListener('scroll', () => {
   .service-card p {
     color: var(--dark-neon-blue);
   }
+
+  body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode .hero-section {
+    background: linear-gradient(-45deg, #f0f0f0, #e0e0e0, #f0f0f0, #e0e0e0);
+}
+
+body.light-mode .hero-section h1 {
+    background: linear-gradient(45deg, #0077cc, #00aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .service-card {
+    background: #f0f0f0;
+    border: 1px solid #0077cc;
+}
+
+body.light-mode .glow-button {
+    background-color: #0077cc;
+    color: #ffffff;
+}
